@@ -2,18 +2,18 @@
 # 畅想互动iOS接入文档 #
 
 ## 重要提醒 ##
-* **SDK有使用到IDFA，提交苹果审核时注意勾选，参考下图：**
+1. **SDK有使用到IDFA，提交苹果审核时注意勾选，参考下图：**
 
 ![](md/ReviewIDFA.jpeg)
 
-* **Xcode工程需关闭 Bitcode，本 SDK 支持 iOS8 及以上版本，兼容横竖屏；支持 arm64 armv7 armv7s**
+2. **Xcode工程需关闭 Bitcode，本 SDK 支持 iOS8 及以上版本，兼容横竖屏；支持 arm64 armv7 armv7s**
 	
-* **SDK默认开启自动登录功能，不能关闭；用户要切换账号需登陆成功后点击切换**
+3. **SDK默认开启自动登录功能，不能关闭；用户要切换账号需登陆成功后点击切换**
 
 </br>
 
 ## SDK接入说明 ##
-* **获取参数
+1. **获取参数
 从后台获取以下参数，用于工程配置及代码接入**
 
 
@@ -24,13 +24,13 @@ game_key | string | 后台分配的每个游戏的唯一标识串
 
 </br>
 
-* **将SDK加入(拖入)工程：**
+2. **将SDK加入(拖入)工程：**
 
 ![](md/add.png)
 
 </br>
 
-* **关闭工程 Bitcode（ TARGETS -> Build Settings -> Build Options -> Enable Bitcode 设置为 NO）**
+3. **关闭工程 Bitcode（ TARGETS -> Build Settings -> Build Options -> Enable Bitcode 设置为 NO）**
 
 ![](md/Bitcode.jpeg)
 	
@@ -38,7 +38,7 @@ game_key | string | 后台分配的每个游戏的唯一标识串
 	
 </br>
 
-* **初始化，在合适的地方引入头文件，用 game_key 初始化 SDK**
+4. **初始化，在合适的地方引入头文件，用 game_key 初始化 SDK**
 
 
 
@@ -55,7 +55,7 @@ game_key | NSString* | game_key
 			
 </br>
 
-* **登录**
+5. **登录**
 
 ```
 [QingApi qingRequestOrderParams:params withBlock:^(QingOrderResult *info){        
@@ -73,7 +73,7 @@ qing\_user\_token | NSString | 登录票据
 	
 </br>
 
-* **登出**
+6. **登出**
  		
 ```
 [QingApi qingLogout];
@@ -82,7 +82,7 @@ qing\_user\_token | NSString | 登录票据
 </br>
 
 
-* **支付，支付前请先查询SDK支付是否可用，若不可用，则走CP自己的IAP支付**
+7. **支付，支付前请先查询SDK支付是否可用，若不可用，则走CP自己的IAP支付**
 
 ```
 [QingApi qingIsPaymentUsable];  // 返回YES则可用， NO则不可用
@@ -129,7 +129,7 @@ qing_message | NSString | 支付结果信息
 
 ## 常见错误处理 ##
 
-* iOS version相关
+1. iOS version相关
 
 ![](md/error0.png)
 	
@@ -137,7 +137,7 @@ qing_message | NSString | 支付结果信息
 
 </br>
 
-* Bitcode没关
+2. Bitcode没关
 
 ![](md/error1.png)
 	
@@ -145,7 +145,7 @@ qing_message | NSString | 支付结果信息
 
 </br>
 	
-* 架构相关
+3. 架构相关
 
 ![](md/error2.png)
 	
@@ -153,7 +153,7 @@ qing_message | NSString | 支付结果信息
 
 </br>
 
-* 系统异常
+4. 系统异常
 
 ![](md/error3.jpeg)
 
