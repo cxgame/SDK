@@ -53,7 +53,7 @@ game_key | NSString* | game_key
 * **登录**
 
 
-    [QingApi qingRequestOrderParams:params withBlock:^(QingOrderResult *info){        
+		[QingApi qingRequestOrderParams:params withBlock:^(QingOrderResult *info){        
         	NSLog(@"did pay %@",info);
     	}];
 登录回调QingOrderResult，参数见下面
@@ -69,7 +69,7 @@ qing\_user\_token | NSString | 登录票据
 
 * **登出**
  		
-    [QingApi qingLogout];
+		[QingApi qingLogout];
 			
 </br>
 
