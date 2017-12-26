@@ -40,10 +40,11 @@ game_key | string | 后台分配的每个游戏的唯一标识串
 
 
 
-		#import "QingUtil/QingUtil.h"
+```
+#import "QingUtil/QingUtil.h"
 
-		[QingApi initWithGameKey:@"xxxxxxxx"]   // 替换成game_key
-		
+[QingApi initWithGameKey:@"xxxxxxxx"]   // 替换成game_key
+```
 参数名 | 类型 | 说明   
 :------- |:------- | :-----------
 game_key | NSString* | game_key
@@ -54,11 +55,11 @@ game_key | NSString* | game_key
 
 * **登录**
 
-
-		[QingApi qingRequestOrderParams:params withBlock:^(QingOrderResult *info){        
+```
+[QingApi qingRequestOrderParams:params withBlock:^(QingOrderResult *info){        
         	NSLog(@"did pay %@",info);
-    	}];
-    	
+}];
+``` 	
 登录回调QingOrderResult，参数见下面
 
 QingUserInfo字段 | 类型 | 说明   
@@ -72,29 +73,35 @@ qing\_user\_token | NSString | 登录票据
 
 * **登出**
  		
-		[QingApi qingLogout];
+```
+[QingApi qingLogout];
+```
 			
 </br>
 
 
 * **支付，支付前请先查询SDK支付是否可用，若不可用，则走CP自己的IAP支付**
 
-
-		[QingApi qingIsPaymentUsable];  // 返回YES则可用， NO则不可用
+```
+[QingApi qingIsPaymentUsable];  // 返回YES则可用， NO则不可用
+```
 		
 * **拉起支付**
 
-		QingOrderParams *params = [[QingOrderParams alloc] init];
-		params.qing_product_name = @"test_product";        // 商品名
-		params.qing_product_price = 1;                     // 价格 单位:分
-		params.qing_cp_order_id = @"test_order_ID";        // cp订单号
-		params.qing_is_sandbox = NO;                       // 是否沙盒
-		params.qing_extends_param1 = @"extends_param1";    // 扩展参数1
-		params.qing_extends_param2 = @"extends_param2";    // 扩展参数2
-		 
-		[QingApi qingRequestOrderInfo:params withBlock:^(QingOrderResult *info){
-			NSLog(@"did pay %@",info);
-		}];                                                // 拉起支付
+```
+QingOrderParams *params = [[QingOrderParams alloc] init];
+params.qing_product_name = @"test_product";        // 商品名
+params.qing_product_price = 1;                     // 价格 单位:分
+params.qing_cp_order_id = @"test_order_ID";        // cp订单号
+params.qing_is_sandbox = NO;                       // 是否沙盒
+params.qing_extends_param1 = @"extends_param1";    // 扩展参数1
+params.qing_extends_param2 = @"extends_param2";    // 扩展参数2
+ 
+[QingApi qingRequestOrderInfo:params withBlock:^(QingOrderResult *info){
+	NSLog(@"did pay %@",info);
+}];                                                // 拉起支付
+
+```
 QingOrderParams字段 | 类型 | 说明   
 :------- |:------- | :-----------
 qing\_product\_name | NSString | 商品名
@@ -121,23 +128,30 @@ qing_message | NSString | 支付结果信息
 
 * iOS version相关
 
-	![](md/error0.png)
+![](md/error0.png)
 	
-	解决方法：**SDK最低支持iOS8，若项目需要更低版本，请联系技术支持**
+解决方法：**SDK最低支持iOS8，若项目需要更低版本，请联系技术支持**
+
+</br>
+
 * Bitcode没关
 
-	![](md/error1.png)
+![](md/error1.png)
 	
-	解决方法：**TARGETS -> Build Settings -> Build Options -> Enable Bitcode 设置为 NO**
+解决方法：**TARGETS -> Build Settings -> Build Options -> Enable Bitcode 设置为 NO**
+
+</br>
 	
 * 架构相关
 
-	![](md/error2.png)
+![](md/error2.png)
 	
-	解决方法：**SDK不支持模拟器编译，只能真机运行，若真的需要在模拟器中运行，请联系技术支持**
-	
+解决方法：**SDK不支持模拟器编译，只能真机运行，若真的需要在模拟器中运行，请联系技术支持**
+
+</br>
+
 * 系统异常
 
-	![](md/error3.jpeg)
+![](md/error3.jpeg)
 
-	解决方法：**SDK初始化失败或在初始化前调用了其他接口，请查看初始化game_key是否正确，且确保在其他调用前执行初始化**
+解决方法：**SDK初始化失败或在初始化前调用了其他接口，请查看初始化game_key是否正确，且确保在其他调用前执行初始化**
