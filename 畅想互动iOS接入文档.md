@@ -2,7 +2,7 @@
 ##重要提醒
 * **SDK有使用到IDFA，提交苹果审核时注意勾选，参考下图：**
 
-	![](md/Review IDFA.jpeg)
+![](md/ReviewIDFA.jpeg)
 * **Xcode工程需关闭 Bitcode，本 SDK 支持 iOS8 及以上版本，兼容横竖屏；支持 arm64 armv7 armv7s**
 	
 * **SDK默认开启自动登录功能，不能关闭；用户要切换账号需登陆成功后点击切换**
@@ -14,21 +14,22 @@
 从后台获取以下参数，用于工程配置及代码接入**
 
 
-	参数名 | 类型 | 说明   
+参数名 | 类型 | 说明   
 :------- |:------- | :-----------
 game_key | string | 后台分配的每个游戏的唯一标识串
+
 
 </br>
 
 * **将SDK加入(拖入)工程：**
 
-	![](md/add.png)
+![](md/add.png)
 
 </br>
 
 * **关闭工程 Bitcode（ TARGETS -> Build Settings -> Build Options -> Enable Bitcode 设置为 NO）**
 
-	![](md/Bitcode.jpeg)
+![](md/Bitcode.jpeg)
 	
 
 	
@@ -36,7 +37,7 @@ game_key | string | 后台分配的每个游戏的唯一标识串
 
 * **初始化，在合适的地方引入头文件，用 game_key 初始化 SDK**
 
-* 
+
 
 		#import "QingUtil/QingUtil.h"
 
@@ -57,7 +58,7 @@ game_key | NSString* | game_key
     	}];
 登录回调QingOrderResult，参数见下面
 
-	QingUserInfo字段 | 类型 | 说明   
+QingUserInfo字段 | 类型 | 说明   
 :------- |:------- | :-----------
 qing\_user\_id | NSString | 玩家唯一标识
 qing\_user\_token | NSString | 登录票据
@@ -75,11 +76,10 @@ qing\_user\_token | NSString | 登录票据
 
 * **支付，支付前请先查询SDK支付是否可用，若不可用，则走CP自己的IAP支付**
 
-* 
 
 		[QingApi qingIsPaymentUsable];  // 返回YES则可用， NO则不可用
-	**拉起支付**
-
+		
+**拉起支付**
 
 		QingOrderParams *params = [[QingOrderParams alloc] init];
     	params.qing_product_name = @"test_product";        // 商品名
@@ -101,10 +101,9 @@ qing\_is\_sandbox | BOOL | 是否沙盒 1为是，0为否
 qing\_extends\_param1 | NSString | 扩展参数1（CP用）
 qing\_extends\_param2 | NSString | 扩展参数2（CP用）
 
-	支付回调resultInfo见下表
+支付回调resultInfo见下表	
 	
-	
-	QingOrderResult字段 | 类型 | 说明
+QingOrderResult字段 | 类型 | 说明
 :------- |:------- | :-----------
 qing\_order\_id | NSString | 平台订单号
 qing\_cp\_order\_id | NSString | CP订单号
