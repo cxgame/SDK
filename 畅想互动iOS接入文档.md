@@ -3,6 +3,7 @@
 * **SDK有使用到IDFA，提交苹果审核时注意勾选，参考下图：**
 
 ![](md/ReviewIDFA.jpeg)
+
 * **Xcode工程需关闭 Bitcode，本 SDK 支持 iOS8 及以上版本，兼容横竖屏；支持 arm64 armv7 armv7s**
 	
 * **SDK默认开启自动登录功能，不能关闭；用户要切换账号需登陆成功后点击切换**
@@ -44,8 +45,8 @@
 		[QingApi initWithGameKey:@"xxxxxxxx"]   // 替换成game_key
 		
 	参数名 | 类型 | 说明   
-	:------- |:------- | :-----------
-	game_key | NSString* | game_key
+:------- |:------- | :-----------
+game_key | NSString* | game_key
 
 		
 			
@@ -61,9 +62,9 @@
 登录回调QingOrderResult，参数见下面
 
 	QingUserInfo字段 | 类型 | 说明   
-	:------- |:------- | :-----------
-	qing\_user\_id | NSString | 玩家唯一标识
-	qing\_user\_token | NSString | 登录票据
+:------- |:------- | :-----------
+qing\_user\_id | NSString | 玩家唯一标识
+qing\_user\_token | NSString | 登录票据
 
 **若已登陆过，下次启动SDK将会自动登录，玩家要切换账号的话需自动登录成功后点击“切换账号”进行切换**
 	
@@ -95,22 +96,22 @@
 			NSLog(@"did pay %@",info);
 		}];                                                // 拉起支付
 	QingOrderParams字段 | 类型 | 说明   
-	:------- |:------- | :-----------
-	qing\_product\_name | NSString | 商品名
-	qing\_product\_price | int | 商品价格，单位：分(RMB)
-	qing\_cp\_order\_id | NSString | CP订单号
-	qing\_is\_sandbox | BOOL | 是否沙盒 1为是，0为否
-	qing\_extends\_param1 | NSString | 扩展参数1（CP用）
-	qing\_extends\_param2 | NSString | 扩展参数2（CP用）
+:------- |:------- | :-----------
+qing\_product\_name | NSString | 商品名
+qing\_product\_price | int | 商品价格，单位：分(RMB)
+qing\_cp\_order\_id | NSString | CP订单号
+qing\_is\_sandbox | BOOL | 是否沙盒 1为是，0为否
+qing\_extends\_param1 | NSString | 扩展参数1（CP用）
+qing\_extends\_param2 | NSString | 扩展参数2（CP用）
 
 支付回调resultInfo见下表	
 	
 	QingOrderResult字段 | 类型 | 说明
-	:------- |:------- | :-----------
-	qing\_order\_id | NSString | 平台订单号
-	qing\_cp\_order\_id | NSString | CP订单号
-	qing\_state | int | 支付结果，大于2为支付成功
-	qing_message | NSString | 支付结果信息
+:------- |:------- | :-----------
+qing\_order\_id | NSString | 平台订单号
+qing\_cp\_order\_id | NSString | CP订单号
+qing\_state | int | 支付结果，大于2为支付成功
+qing_message | NSString | 支付结果信息
 
 
 	
