@@ -1,4 +1,4 @@
-#畅想互动iOS接入文档
+=畅想互动iOS接入文档
 ##重要提醒
 * **SDK有使用到IDFA，提交苹果审核时注意勾选，参考下图：**
 
@@ -110,6 +110,7 @@ qing\_cp\_order\_id | NSString | CP订单号
 qing\_is\_sandbox | BOOL | 是否沙盒 1为是，0为否
 qing\_extends\_param1 | NSString | 扩展参数1（CP用）
 qing\_extends\_param2 | NSString | 扩展参数2（CP用）
+
 支付回调resultInfo见下表
 	
 QingOrderResult字段 | 类型 | 说明
