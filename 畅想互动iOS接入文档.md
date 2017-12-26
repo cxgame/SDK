@@ -17,6 +17,7 @@
 	参数名 | 类型 | 说明   
 :------- |:------- | :-----------
 game_key | string | 后台分配的每个游戏的唯一标识串
+
 </br>
 
 * **将SDK加入(拖入)工程：**
@@ -60,6 +61,7 @@ game_key | NSString* | game_key
 :------- |:------- | :-----------
 qing\_user\_id | NSString | 玩家唯一标识
 qing\_user\_token | NSString | 登录票据
+
 **若已登陆过，下次启动SDK将会自动登录，玩家要切换账号的话需自动登录成功后点击“切换账号”进行切换**
 	
 </br>
@@ -102,7 +104,7 @@ qing\_extends\_param2 | NSString | 扩展参数2（CP用）
 	支付回调resultInfo见下表
 	
 	
-	QingOrderResult字段 | 类型 | 说明   
+	QingOrderResult字段 | 类型 | 说明
 :------- |:------- | :-----------
 qing\_order\_id | NSString | 平台订单号
 qing\_cp\_order\_id | NSString | CP订单号
