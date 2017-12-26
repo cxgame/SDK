@@ -15,9 +15,9 @@
 从后台获取以下参数，用于工程配置及代码接入**
 
 
-	参数名 | 类型 | 说明   
-	:------- |:------- | :-----------
-	game_key | string | 后台分配的每个游戏的唯一标识串
+参数名 | 类型 | 说明   
+:------- |:------- | :-----------
+game_key | string | 后台分配的每个游戏的唯一标识串
 
 
 </br>
@@ -44,7 +44,7 @@
 
 		[QingApi initWithGameKey:@"xxxxxxxx"]   // 替换成game_key
 		
-	参数名 | 类型 | 说明   
+参数名 | 类型 | 说明   
 :------- |:------- | :-----------
 game_key | NSString* | game_key
 
@@ -61,7 +61,7 @@ game_key | NSString* | game_key
     	
 登录回调QingOrderResult，参数见下面
 
-	QingUserInfo字段 | 类型 | 说明   
+QingUserInfo字段 | 类型 | 说明   
 :------- |:------- | :-----------
 qing\_user\_id | NSString | 玩家唯一标识
 qing\_user\_token | NSString | 登录票据
@@ -95,7 +95,7 @@ qing\_user\_token | NSString | 登录票据
 		[QingApi qingRequestOrderInfo:params withBlock:^(QingOrderResult *info){
 			NSLog(@"did pay %@",info);
 		}];                                                // 拉起支付
-	QingOrderParams字段 | 类型 | 说明   
+QingOrderParams字段 | 类型 | 说明   
 :------- |:------- | :-----------
 qing\_product\_name | NSString | 商品名
 qing\_product\_price | int | 商品价格，单位：分(RMB)
@@ -103,10 +103,9 @@ qing\_cp\_order\_id | NSString | CP订单号
 qing\_is\_sandbox | BOOL | 是否沙盒 1为是，0为否
 qing\_extends\_param1 | NSString | 扩展参数1（CP用）
 qing\_extends\_param2 | NSString | 扩展参数2（CP用）
-
-支付回调resultInfo见下表	
+支付回调resultInfo见下表
 	
-	QingOrderResult字段 | 类型 | 说明
+QingOrderResult字段 | 类型 | 说明
 :------- |:------- | :-----------
 qing\_order\_id | NSString | 平台订单号
 qing\_cp\_order\_id | NSString | CP订单号
