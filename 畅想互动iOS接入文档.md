@@ -79,19 +79,19 @@ qing\_user\_token | NSString | 登录票据
 
 		[QingApi qingIsPaymentUsable];  // 返回YES则可用， NO则不可用
 		
-**拉起支付**
+* **拉起支付**
 
 		QingOrderParams *params = [[QingOrderParams alloc] init];
-    	params.qing_product_name = @"test_product";        // 商品名
-    	params.qing_product_price = 1;                     // 价格 单位:分
-    	params.qing_cp_order_id = @"test_order_ID";        // cp订单号
-    	params.qing_is_sandbox = NO;                       // 是否沙盒
-    	params.qing_extends_param1 = @"extends_param1";    // 扩展参数1
-    	params.qing_extends_param2 = @"extends_param2";    // 扩展参数2
-     
-    	[QingApi qingRequestOrderInfo:params withBlock:^(QingOrderResult *info){
-        	NSLog(@"did pay %@",info);
-    	}];                                                // 拉起支付
+		params.qing_product_name = @"test_product";        // 商品名
+		params.qing_product_price = 1;                     // 价格 单位:分
+		params.qing_cp_order_id = @"test_order_ID";        // cp订单号
+		params.qing_is_sandbox = NO;                       // 是否沙盒
+		params.qing_extends_param1 = @"extends_param1";    // 扩展参数1
+		params.qing_extends_param2 = @"extends_param2";    // 扩展参数2
+		 
+		[QingApi qingRequestOrderInfo:params withBlock:^(QingOrderResult *info){
+			NSLog(@"did pay %@",info);
+		}];                                                // 拉起支付
 QingOrderParams字段 | 类型 | 说明   
 :------- |:------- | :-----------
 qing\_product\_name | NSString | 商品名
