@@ -4,7 +4,7 @@
 ## 重要提醒 ##
 * **SDK有使用到IDFA，提交苹果审核时注意勾选，参考下图：**
 
-![](md/ReviewIDFA.jpeg)
+![](.md/ReviewIDFA.jpeg)
 
 
 * **Xcode工程需关闭 Bitcode，本 SDK 支持 iOS8 及以上版本，兼容横竖屏；支持 arm64 armv7 armv7s**
@@ -30,13 +30,13 @@ game_key | string | 后台分配的每个游戏的唯一标识串
 
 * **将SDK加入(拖入)工程：**
 
-![](md/add.png)
+![](.md/add.png)
 
 </br>
 
 * **关闭工程 Bitcode（ TARGETS -> Build Settings -> Build Options -> Enable Bitcode 设置为 NO）**
 
-![](md/Bitcode.jpeg)
+![](.md/Bitcode.jpeg)
 	
 
 	
@@ -146,7 +146,7 @@ qing_message | NSString | 支付结果信息
 
 * iOS version相关
 
-![](md/error0.png)
+![](.md/error0.png)
 	
 解决方法：**SDK最低支持iOS8，若项目需要更低版本，请联系技术支持**
 
@@ -154,7 +154,7 @@ qing_message | NSString | 支付结果信息
 
 * Bitcode没关
 
-![](md/error1.png)
+![](.md/error1.png)
 	
 解决方法：**TARGETS -> Build Settings -> Build Options -> Enable Bitcode 设置为 NO**
 
@@ -162,7 +162,7 @@ qing_message | NSString | 支付结果信息
 	
 * 架构相关
 
-![](md/error2.png)
+![](.md/error2.png)
 	
 解决方法：**SDK不支持模拟器编译，只能真机运行，若真的需要在模拟器中运行，请联系技术支持**
 
@@ -170,7 +170,7 @@ qing_message | NSString | 支付结果信息
 
 * IAP相关
 
-![](md/iap.png)
+![](.md/iap.png)
 	
 解决方法：**检查计费点配置及报名是否正确**
 
@@ -178,6 +178,6 @@ qing_message | NSString | 支付结果信息
 
 * 系统异常
 
-![](md/error3.jpeg)
+![](.md/error3.jpeg)
 
 解决方法：**SDK初始化失败或在初始化前调用了其他接口，请查看初始化game_key是否正确，且确保在其他调用前执行初始化**
