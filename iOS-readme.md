@@ -134,8 +134,9 @@ QingOrderResult字段 | 类型 | 说明
 :------- |:------- | :-----------
 qing\_order\_id | NSString | 平台订单号
 qing\_cp\_order\_id | NSString | CP订单号
-qing\_state | int | 支付结果，<font color=red>大于2为支付成功</font>
+qing\_result | BOOL | 支付结果，是否成功
 qing_message | NSString | 支付结果信息
+<font color=gray>qing\_state</font> | <font color=gray>int</font> | <font color=gray>支付状态，已弃用</font>
 
 
 	
