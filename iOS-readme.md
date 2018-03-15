@@ -108,7 +108,6 @@ params.qing_product_name = @"test_product";        // 商品名
 params.qing_product_id = @"cx-6";                  // 商品ID（运营提供）
 params.qing_product_price = 600                    // 价格 单位:分
 params.qing_cp_order_id = @"test_order_ID";        // cp订单号
-params.qing_is_sandbox = NO;                       // 是否沙盒
 params.qing_extends_param1 = @"extends_param1";    // 扩展透传参数1
 params.qing_extends_param2 = @"extends_param2";    // 扩展透传参数2
  

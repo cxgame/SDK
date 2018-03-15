@@ -7,5 +7,11 @@
 
 ##v0.1.6       <font size = 2>2018年1月13日 </font>
 
-*  <font color=red>修复打开webview时低版本ios严重闪退bug</font>
+* <font color=red>修复打开webview时低版本ios严重闪退bug</font>
 * <font color=red>更改WKWebView控件为UIWebView以兼容部分iOS10无法载入(白屏)问题</font>
+
+##v0.1.7       <font size = 2>2018年3月14日 </font>
+
+* 增加隐私政策配置
+* 增加审核切界面机制
+* 微调布局
