@@ -118,7 +118,7 @@ qingx\_user\_token | NSString | 登录票据
 * **登出**
  		
 ```
-[QingXUtil qingLogout];
+[QingXUtil xLogout];
 ```
 			
 </br>
@@ -157,7 +157,7 @@ qingx\_product\_id | NSString | 是 | 商品ID（运营提供）
 qingx\_product\_price | int | 是| 商品价格，<font color=red>单位：分</font>
 qingx\_cp\_order\_id | NSString | 是| CP订单号
 qingx\_role\_id | NSString | 是| 角色id
-qingx\role\_name | NSString | 是| CP订单号
+qingx\_role\_name | NSString | 是| CP订单号
 qingx\_server\_id | NSString | 是| 角色名
 qingx\_server\_name | NSString | 是| 区服id
 qingx\_role\_vip | NSString | 是| vip等级
