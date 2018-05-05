@@ -26,3 +26,9 @@
 * 删除初始化接口，改didFinishLauhching里获取plist里的gamekey初始化
 * 增加生命周期接口
 * 支付接口增加玩家角色信息采集
+
+##v0.2.0       <font size = 2>2018年5月5日 </font>
+
+* 整合聚合SDK
+* 增加客户端防刷机制
+* 增加Keychain
