@@ -1,5 +1,5 @@
 
-# 畅想互动iOS接入文档 v0.2.0-180505 #
+# 畅想互动iOS接入文档 v0.2.1-180529#
 
 ## 重要提醒 ##
 * **SDK有使用到IDFA，提交苹果审核时注意勾选，参考下图：**
@@ -32,19 +32,18 @@ CXGameKey | string | 我方提供的gamekey
 
 * QingXUtil.framework
 
-* QingX_Qing.framework
 
 * QingXInfo.plist
 
-![](.md/add.jpeg)
+![](.md/add.png)
 
 <font color=red>**注意查看Framework搜索路径是否包含SDK所在目录**</font>
 
 </br>
 
-* **Target->General->Embedded Binaries里添加QingXUtil.framework和QingX_Qing.framework：**
+* **Target->General->Embedded Binaries里添加QingXUtil.framework**
 
-![](.md/embedded.png)
+![](.md/embedded.jpeg)
 
 
 * <font color=red>**在QingXInfo.plist添加CXGameKey，值为我方提供的gamekey【重要】</font>**
@@ -240,7 +239,7 @@ qingx_message | NSString | 支付结果信息
 
 ![](.md/imagenotfound.png)
 	
-解决方法：**General->embedded binaries里添加QingXUtil.framework和QingX_Qing.framework**
+解决方法：**General->embedded binaries里添加QingXUtil.framework**
 
 </br>
 
