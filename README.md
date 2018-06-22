@@ -179,7 +179,7 @@ qingx_message | NSString | 支付结果信息
 
 </br>
 
-* **上报角色信息接口【必接】**
+* **上报角色信息接口【重要】**
 
 ```
 QingX_RoleInfo *roleInfo = [[QingX_RoleInfo alloc] init];
