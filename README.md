@@ -1,5 +1,5 @@
 
-# 畅想互动iOS接入文档 v0.2.1-180529#
+# 畅想互动iOS接入文档 v0.2.2-180622#
 
 ## 重要提醒 ##
 * **SDK有使用到IDFA，提交苹果审核时注意勾选，参考下图：**
@@ -176,6 +176,32 @@ qingx\_result | BOOL | 支付结果，是否成功
 qingx_message | NSString | 支付结果信息
 <font color=gray>qing\_state</font> | <font color=gray>int</font> | <font color=gray>支付状态，已弃用</font>
 
+
+</br>
+
+* **上报角色信息接口【必接】**
+
+```
+QingX_RoleInfo *roleInfo = [[QingX_RoleInfo alloc] init];
+roleInfo.qingx_server_id = [NSString stringWithUTF8String:"区服ID"];
+roleInfo.qingx_server_name = [NSString stringWithUTF8String:"区服名"];
+roleInfo.qingx_role_id = [NSString stringWithUTF8String:"角色ID"];
+roleInfo.qingx_role_name = [NSString stringWithUTF8String:"角色名"];
+roleInfo.qingx_role_level = [NSString stringWithUTF8String:"角色等级"];
+roleInfo.qingx_role_vip = [NSString stringWithUTF8String:"角色VIP等级"];
+roleInfo.qingx_role_diamond = [NSString stringWithUTF8String:"角色主要货币量"];
+roleInfo.qingx_role_party_name = [NSString stringWithUTF8String:"角色工会名"];
+roleInfo.qingx_role_create_time = [NSString stringWithUTF8String:"角色创建时间"];
+roleInfo.qingx_role_extend = [NSString stringWithUTF8String:"角色其他信息"];
+        
+[QingXUtil xSetRoleInfo:roleInfo andType:0];
+
+```
+andType | 说明
+:----- | :-----------
+0 | 进入游戏
+1 | 创建角色
+2 | 角色信息更新(升级)
 
 </br>
 
